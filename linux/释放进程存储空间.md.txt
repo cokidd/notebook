@@ -1,0 +1,9 @@
+## 查看是否释放存储空间(target_dir 代表的是需要查看的目录)
+``` shell
+lsof -n target_dir |grep delete
+```
+## 将对应文件的文件描述符写空（fd）
+```
+echo "" > /proc/pid/fd/fd_id
+```
+[^] 注意此操作会清空当前存在的文件。
